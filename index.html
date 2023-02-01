@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-flex">
+        <img
+          class="header-logo"
+          src="./assets/images/logo.svg"
+          alt="logo for news homepage"
+        />
+
+        <nav class="nav-desktop">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+
+        <svg
+          class="menu-open"
+          onclick="toggleMenu()"
+          role="button"
+          width="40"
+          height="17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+            <path d="M0 0h40v3H0z" />
+          </g>
+        </svg>
+        <div class="nav-mobile-modal hidden">
+          <div class="modal-glass"></div>
+          <nav class="nav-mobile">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Categories</a></li>
+            </ul>
+          </nav>
+        </div>
+        <svg
+          class="menu-close hidden"
+          onclick="toggleMenu()"
+          role="button"
+          width="32"
+          height="31"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#00001A" fill-rule="evenodd">
+            <path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z" />
+            <path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z" />
+          </g>
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero-section">
+        <picture class="hero-img">
+          <source
+            srcset="./assets/images/image-web-3-mobile.jpg"
+            media="(max-width: 375px)"
+          />
+          <source
+            srcset="./assets/images/image-web-3-desktop.jpg"
+            media="(min-width: 376px)"
+          />
+          <img
+            class="hero-img"
+            src="./assets/images/image-web-3-mobile.jpg"
+            alt="geometric shapes and patters"
+          />
+        </picture>
+
+        <h1>The Bright Future of Web 3.0?</h1>
+
+        <p class="hero-p">
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+
+        <button class="hero-btn" role="link">Read more</button>
+      </div>
+
+      <div class="new-articles">
+        <h2>New</h2>
+
+        <section class="new-article">
+          <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </section>
+        <section class="new-article">
+          <h3><a href="#">The Downsides of AI Artistry</a></h3>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </section>
+        <section class="new-article">
+          <h3><a href="#">Is VC Funding Drying Up?</a></h3>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </section>
+      </div>
+
+      <div class="top-articles">
+        <section class="top-article">
+          <img
+            src="./assets/images/image-retro-pcs.jpg"
+            alt="a mini retro computer"
+          />
+          <div>
+            <h2>01</h2>
+            <h3><a href="#">Reviving Retro PCs</a></h3>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </section>
+        <section class="top-article">
+          <img
+            src="./assets/images/image-top-laptops.jpg"
+            alt="a laptop keyboard"
+          />
+          <div>
+            <h2>02</h2>
+            <h3><a href="#">Top 10 Laptops of 2022</a></h3>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </section>
+        <section class="top-article">
+          <img
+            src="./assets/images/image-gaming-growth.jpg"
+            alt="person's hand with a gaming controller floating above it"
+          />
+          <div>
+            <h2>03</h2>
+            <h3><a href="#">The Growth of Gaming</a></h3>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/alexward976" target="_blank">Alex Ward</a>.
+      </div>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
